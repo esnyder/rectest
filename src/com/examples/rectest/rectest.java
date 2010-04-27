@@ -14,7 +14,6 @@ public class rectest extends Activity implements MediaRecorder.OnInfoListener, M
     static final String SAMPLE_PREFIX = "recording";
     private MediaRecorder recorder = null;
     private File mSampleFile = null;
-    //private String path;
     private TextView tv = null;
 
     //private Logger tv;
@@ -25,11 +24,17 @@ public class rectest extends Activity implements MediaRecorder.OnInfoListener, M
     {
         super.onCreate(savedInstanceState);
         try {
+            // Eventually we will take our config parameters from the UI fields defined
+            // in this layout and start/stop recording in response to the button clicks.
+            //
+            // For now we just use the tv field as our logging text view and ignore the
+            // content of the UI elements.
             setContentView(R.layout.main);
             
             tv = (TextView) findViewById(R.id.tv);
             tv.append("rectest::onCreate about to set up recorder\n");
         } catch (Exception e) {
+            // If we can't create the ui from the XML description, try to figure out why.
             tv = new TextView(this);
             setContentView(tv);
             tv.append("Exception trying to set up UI via XML defined layout: " + e + "\n");
