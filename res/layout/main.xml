@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    >
+
+<TextView android:text="Enter duration (ms):"
+          android:layout_width="fill_parent"
+          android:layout_height="wrap_content"
+          />
+<EditText android:id="@+id/maxduration"
+          android:layout_width="fill_parent"
+          android:layout_height="wrap_content"
+          android:text="1000">
+</EditText>
+
+<TextView android:text="Enter filesize (bytes):"
+          android:layout_width="fill_parent"
+          android:layout_height="wrap_content"
+/>
+<EditText android:id="@+id/maxsize"
+          android:layout_width="fill_parent"
+          android:layout_height="wrap_content"
+          android:text="1024">
+</EditText>
+
+<TextView android:text="File to save:"
+          android:layout_width="fill_parent"
+          android:layout_height="wrap_content"
+/>
+<EditText android:id="@+id/destfile"
+          android:layout_width="fill_parent"
+          android:layout_height="wrap_content"
+          android:text="/sdcard/rectest.3gp">
+</EditText>
+
+<Button android:id="@+id/rec"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Record"/>
+
+<TextView android:id="@+id/tv" 
+          android:layout_width="fill_parent"
+          android:layout_height="wrap_content"
+          android:text=""/>
+
+</LinearLayout>
+
